@@ -37,8 +37,8 @@ const Statistics: FC<FeebackType> = ({ good, neutral, bad }) => {
 
   return (
     <table>
-      {statisticsContents.map((content) => (
-        <StatisticsLine {...content} />
+      {statisticsContents.map((content, index) => (
+        <StatisticsLine key={index} {...content} />
       ))}
     </table>
   );
